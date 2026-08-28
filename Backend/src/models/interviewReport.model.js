@@ -99,7 +99,7 @@ const preparationPlanSchema = new mongoose.Schema({
   }]
 })
 
-const inteviewReportSchema = new mongoose.Schema({
+const interviewReportSchema = new mongoose.Schema({
   jobDescription : {
     type:String,
     required: [true,"Job decription is required"]
@@ -122,6 +122,10 @@ const inteviewReportSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "user"
+  },
+  title:{
+    type: String,
+    default: "Interview Plan"
   }
   },
   {
